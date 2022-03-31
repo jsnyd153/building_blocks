@@ -1,0 +1,32 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.cta--bleed {
+  --background_color:#0052cc;
+  --text_color:white;
+  margin-top: var(--sp-500);
+}
+.cta--bleed .block {
+  --column_span: 14;
+  --column_start: 1;
+  padding: var(--sp-600) 0;
+  display: flex;
+}
+.cta--bleed .block .text_area {
+  flex-grow: 1;
+}
+.cta--bleed .block .text_area .content {
+  text-align: center;
+  padding: var(--sp-600);
+}
+.cta--bleed .block .text_area .content .base-button {
+  margin: var(--sp-500) auto auto auto;
+}
+.cta--bleed .block hr {
+  display: block;
+  width: 1px;
+  background-color: var(--black);
+  border: none;
+  flex-grow: 0;
+}

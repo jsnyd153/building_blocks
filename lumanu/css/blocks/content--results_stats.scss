@@ -1,0 +1,23 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.content--results_stats{
+    .block{
+        margin: var(--sp-400) 0;
+        --items_per_row:2;
+            .text_area{
+                .content{
+                    text-align: center;
+                    h3{
+                        font-size: 4.5rem;
+                        line-height: 1;
+                    }
+                    p{
+                        color: var(--grey-700);
+                        line-height: 1.2;
+                    }
+                }//content
+            }//text_area
+    }//block
+}//section

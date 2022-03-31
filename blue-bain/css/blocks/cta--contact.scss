@@ -1,0 +1,32 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.cta--contact{
+    
+    .block{
+        --items_per_row:2;
+        text-decoration: none;
+        transition: .3s all;
+        border: 1px solid var(--grey-300);
+        grid-auto-flow: dense;
+        margin: var(--sp-400);
+
+            .text_area{
+                padding: var(--sp-500);
+                .content{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: var(--sp-300);
+                    .base-button{
+                        margin-top: var(--sp-300);
+                        margin-right: auto;
+                    }
+                }
+            }//text_area
+    }//.block
+}//promo--full_width
+
+

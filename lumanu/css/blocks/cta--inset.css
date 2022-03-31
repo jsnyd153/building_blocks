@@ -1,0 +1,21 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.cta--inset .block {
+  --background_color:#0052cc;
+  --text_color:white;
+  display: grid;
+  grid-template-columns: repeat(var(--column_span), 1fr);
+  gap: var(--gap);
+  background-color: var(--background_color);
+}
+.cta--inset .block .text_area {
+  grid-column: span 8;
+  padding: var(--sp-600) 0 var(--sp-600) var(--sp-600);
+}
+.cta--inset .block .text_area:last-child {
+  text-align: right;
+  grid-column: span 4;
+  padding: var(--sp-600) var(--sp-600) var(--sp-600) 0;
+}

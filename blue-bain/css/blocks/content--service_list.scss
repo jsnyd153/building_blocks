@@ -1,0 +1,60 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+.content--service_list {
+  .block {
+    .service-list {
+      --items_per_row: 3;
+      display: grid;
+      grid-template-columns: repeat(var(--items_per_row), 1fr);
+      grid-row-gap: var(--sp-200);
+      grid-column-gap: var(--gap);
+      li {
+        a {
+          display: flex;
+          font-size: 1rem;
+          line-height: 100%;
+          font-family: $sans_font;
+          font-weight: 500;
+          color: var(--blue-500);
+          text-decoration: none;
+          transition: 0.3s all;
+          justify-content: space-between;
+          align-items: center;
+          padding: var(--sp-100) 0 var(--sp-200) 0;
+          border-bottom: 1px solid var(--grey-300);
+          position: relative;
+
+          &::before {
+            @include psuedo_block();
+            border-bottom: 1px solid var(--accent);
+            width: 0;
+            transition: 0.3s all;
+            right: 0;
+            left: auto;
+          }
+          &::after {
+            display: inline-block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 0.4em solid transparent;
+            border-bottom: 0.4em solid transparent;
+            border-left: 0.4em solid var(--blue-500);
+            transition: 0.3s all;
+            margin-right: 0.25em;
+          } //after
+          &:hover,
+          &:focus {
+            --text_color: var(--accent);
+            &::before {
+              width: 100%;
+              left: 0;
+              right: auto;
+            }
+          }
+        } //a
+      }
+    }
+  }
+}

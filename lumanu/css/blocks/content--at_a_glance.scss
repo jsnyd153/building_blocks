@@ -1,0 +1,44 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.content--at_a_glance{
+    position: relative;
+
+    .block{
+        margin: var(--sp-600) 0;
+        transition: .3s max-height;
+        display: flex;
+            .text_area{
+                outline: 1px solid green;
+                .content{
+                    h3{
+                        font-size: 3.75rem;
+                        line-height: 1;
+                    }
+                    p{
+                        color: var(--grey-700);
+                        line-height: 1.2;
+                    }
+                }
+
+                //at most 2 text_area
+                &:nth-last-child(-n+2):first-child, &:nth-last-child(-n+2):first-child ~ .text_area{
+                    .content{
+                        h3{
+                            font-size: 4.5rem;
+                        }
+                    }
+                }
+                //at most 1 text_area
+                &:nth-last-child(-n+1):first-child, &:nth-last-child(-n+1):first-child ~ &{
+                    .content{
+                        h3{
+                            font-size: 7rem;
+                        }
+                    }
+                }
+            }
+
+    }
+}//content--core

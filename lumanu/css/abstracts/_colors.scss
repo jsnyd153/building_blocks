@@ -1,0 +1,44 @@
+@use "sass:color";
+
+#checkforrepeat{
+  --hello:repeated;
+}
+
+//colors
+$color_white:               rgba(255, 255, 255, 1);
+$color_grey-100:            rgba(249, 249, 249, 1);
+$color_grey-200:            rgba(235, 235, 235, 1);
+$color_grey-300:            rgba(217, 217, 217, 1);
+$color_grey-400:            rgba(196, 196, 196, 1);
+$color_grey-500:            #F9F9F9;
+$color_grey-600:            rgba(151, 151, 151, 1);
+$color_grey-700:            rgba(118, 118, 118, 1);
+$color_grey-800:            rgba(66, 66, 66, 1);
+$color_grey-900:            rgba(35, 31, 32, 1);
+$color_black:               rgba(0, 0, 0, 1);
+
+$color_blue-300:            rgba(0, 102, 255, 1);
+$color_blue-500:            rgba(0, 82, 204, 1);
+$color_blue-700:            rgba(23, 67, 133, 1);
+
+$colors_full:        (
+
+  //name                   $main variable        $text color
+  'white'                  $color_white          $color_black,
+  'grey-100'               $color_grey-100       $color_black,
+  'grey-200'               $color_grey-200       $color_black,
+  'grey-300'               $color_grey-300       $color_black,
+  'grey-400'               $color_grey-400       $color_black,
+  // 'grey-500'               $color_white       $color_black,
+  'grey-600'               $color_grey-600       $color_white,
+  'grey-700'               $color_grey-700       $color_white,
+  'grey-800'               $color_grey-800       $color_white,
+  'grey-900'               $color_grey-900       $color_white,
+  'black'                  $color_black          $color_white,
+  'blue-300'               $color_blue-300       $color_white,
+  'blue-500'               $color_blue-500       $color_white,
+  'blue-700'               $color_blue-700       $color_white,
+
+);
+
+// color.adjust($color_grey-100, $alpha:-.75); 

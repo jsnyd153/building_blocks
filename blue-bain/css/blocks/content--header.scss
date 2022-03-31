@@ -1,0 +1,25 @@
+@use "sass:color";
+@use '../abstracts' as *;
+@use '../components' as *;
+
+
+.content--header{
+    padding: var(--sp-800) 0 var(--sp-700) 0;
+    .content{
+        display: flex;
+        gap: var(--gap);
+        text-align: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        align-items: center;
+        // flex-wrap: nowrap;
+        flex-direction: row;
+        &::before, &::after{
+            content: "";
+            display: block;
+            flex-grow: 1;
+            // width: 100%;
+            border: 1px solid var(--grey-300);
+        }
+    }
+}

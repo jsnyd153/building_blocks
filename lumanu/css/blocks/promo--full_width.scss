@@ -1,0 +1,51 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.promo--full_width{
+
+    a.block{
+        --items_per_row:2;
+        --text_color:#{$color_white};
+        padding: var(--sp-900) var(--sp-400);
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        transition: .3s all;
+        *{
+            transition: .3s all;
+        }
+
+            .text_area{
+                .content{
+                    h3{
+                        font-weight: 400;
+    
+                        &::after{
+                            content:"→";
+                            display: inline-block;
+                            color: currentColor;
+                            position: relative;
+                            transition: .3s all;
+                            margin-left: .5em;
+                        }
+                    }
+                }
+            }//text_area
+        
+        &:hover{
+            &:hover{
+                h3{
+                    &::after{
+                        margin-left: 1em;
+                    }
+                }
+                .fill{
+                    img{
+                        width: 110%;
+                    }
+                }
+            }
+        }
+    }//a.grid_area.block
+}//promo--full_width

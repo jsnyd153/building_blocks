@@ -1,0 +1,56 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--offerings_cards .block {
+  margin: var(--sp-400) 0;
+  --items_per_row:2;
+}
+.content--offerings_cards .block .industry_card {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid var(--grey-300);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-400);
+  margin: var(--sp-200) 0 0 0;
+  min-height: 12rem;
+}
+.content--offerings_cards .block .industry_card .text_area {
+  margin-bottom: var(--sp-500);
+}
+.content--offerings_cards .block .industry_card .text_area .content {
+  gap: var(--sp-100);
+}
+.content--offerings_cards .block .industry_card .text_area .content h4 {
+  position: relative;
+  padding-right: var(--sp-800);
+  font-weight: 500;
+  line-height: 1.25;
+  transition: color 0.3s;
+}
+.content--offerings_cards .block .industry_card .text_area .content h4::after {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0.3em solid transparent;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.3em solid var(--blue-500);
+  transition: margin 0.3s;
+  position: absolute;
+  top: 0.4em;
+  right: 1em;
+}
+.content--offerings_cards .block .industry_card .text_area .content p {
+  padding-right: var(--sp-700);
+  color: var(--grey-800);
+  line-height: 1.45;
+}
+.content--offerings_cards .block .industry_card:hover .text_area .content h4 {
+  color: var(--accent);
+}
+.content--offerings_cards .block .industry_card:hover .text_area .content h4::after {
+  margin-right: -0.5em;
+}

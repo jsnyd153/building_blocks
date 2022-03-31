@@ -1,0 +1,144 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.hero--article .article-image.block {
+  height: 100%;
+  min-height: 35rem;
+  grid-row: 1/span 3;
+  --column_span: 7;
+  --column_start: 8;
+}
+.hero--article .article-image.block .image_area {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  margin: 0;
+}
+.hero--article .article-image.block .image_area .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero--article .article-image.block .image_area .content::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  background-image: url("media/logo-crop-white.svg");
+  background-position: bottom right;
+  background-size: fit;
+  width: 0.75rem;
+  padding-bottom: 80%;
+}
+.hero--article .article-image.block .image_area .content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero--article .block.article-headline {
+  --column_span: 6;
+  --column_start: 2;
+}
+.hero--article .block.article-headline .text_area {
+  margin: var(--sp-500) 0 var(--sp-300);
+}
+.hero--article .block.article-headline .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-300);
+}
+.hero--article .block.article-headline .content .tag {
+  color: var(--accent);
+}
+.hero--article .block.article-intro {
+  --column_span: 6;
+  --column_start: 2;
+}
+.hero--article .block.article-intro .text_area .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.hero--article .block.article-intro .text_area .content p.large {
+  margin-bottom: var(--sp-300);
+  line-height: 145%;
+}
+.hero--article .block.article-intro .text_area .content p.small {
+  color: var(--grey-700);
+}
+.hero--article .social_links.block {
+  --column_span: 6;
+  --column_start: 2;
+  margin-bottom: var(--sp-500);
+}
+.hero--article .social_links.block .content {
+  display: flex;
+  justify-content: start;
+  gap: var(--sp-100);
+}
+.hero--article .social_links.block .content li a {
+  display: block;
+  width: var(--sp-700);
+  height: var(--sp-700);
+  border-radius: 50%;
+  border: 1px solid var(--grey-300);
+  color: var(--grey-700);
+  background-color: var(--white);
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+.hero--article .social_links.block .content li a svg {
+  width: 60%;
+  fill: currentColor;
+  margin: 10%;
+}
+.hero--article .social_links.block .content li a:hover, .hero--article .social_links.block .content li a:focus {
+  color: var(--white);
+  background-color: var(--grey-700);
+}
+.hero--article .social_links.block .content li a:focus {
+  outline: 2px solid var(--grey-700);
+  outline-offset: 2px;
+}
+.hero--article.featured-image .article-image.block, .hero--article.no-image .article-image.block {
+  grid-row: 1;
+  --column_span: 14;
+  --column_start: 1;
+}
+.hero--article.featured-image .article-image.block .image_area, .hero--article.no-image .article-image.block .image_area {
+  height: calc(100% - var(--sp-900));
+}
+.hero--article.featured-image .block.article-headline, .hero--article.no-image .block.article-headline {
+  --column_span: 9;
+  --column_start: 2;
+  grid-row: 1;
+  position: relative;
+  padding: var(--sp-600) var(--sp-600) 0 var(--sp-600);
+  margin: 25rem calc(var(--sp-600) * -1) 0 calc(var(--sp-600) * -1);
+  background-color: var(--background_color);
+}
+.hero--article.featured-image .block.article-intro, .hero--article.no-image .block.article-intro {
+  --column_span: 9;
+}
+.hero--article.featured-image .social_links.block, .hero--article.no-image .social_links.block {
+  --column_span: 3;
+  --column_start: 11;
+}
+.hero--article.featured-image .social_links.block .content, .hero--article.no-image .social_links.block .content {
+  justify-content: center;
+}
+.hero--article.no-image .article-image.block {
+  display: none;
+}
+.hero--article.no-image .block.article-headline {
+  margin: var(--sp-600) calc(var(--sp-600) * -1) 0 calc(var(--sp-600) * -1);
+}

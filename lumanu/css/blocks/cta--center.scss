@@ -1,0 +1,53 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.cta--center{
+    .block{
+        --column_span: 8;
+		--column_start: 4;
+        text-align: center;
+        padding: var(--sp-600) 0 var(--sp-300) 0; 
+        .text_area{
+            .content{
+                a{
+                    padding: var(--sp-400);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: var(--gap);
+                    text-decoration: none;
+                    transition: .3s all;
+                    *{
+                        transition: .3s all;
+                    }
+    
+                    .label{
+                        color:var(--blue-500);
+                    }
+                    h3{
+                        font-weight: 400;
+                    }
+                    &::after{
+                        content:"→";
+                        display: inline-block;
+                        font-size: 2rem;
+                        color: var(--text_color);
+                        position: relative;
+                        font-family: $sans_font;
+                        transition: .3s all;
+                    }
+                    &:hover{
+                        --text_color:#{$color_blue-500};
+                        &::after{
+                            margin-left:var(--sp-300);
+                        }
+                    }
+                }
+    
+            }//content
+        }//area
+    }//block
+
+}

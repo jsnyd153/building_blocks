@@ -1,0 +1,70 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.promo--columns{
+
+    .block{
+        margin:var(--sp-400) 0;
+        --items_per_row:2;
+        text-decoration: none;
+        transition: .3s all;
+        border: 1px solid var(--grey-300);
+        grid-auto-flow: dense;
+        *{
+            transition: .2s all;
+        }
+
+            .text_area{
+                padding: var(--sp-400) var(--sp-400) var(--sp-400)  var(--sp-600);
+                .content{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: var(--sp-300);
+                    .base-button{
+                        margin-top: var(--sp-300);
+                        margin-right: auto;
+                    }
+                }
+            }//text_area
+            .image_area{
+                .content{
+                    @include cover_container();
+                    height: 100%;
+                    min-height: 20rem;
+                    img{
+                       @include image_cover();
+                    }
+                }
+            }
+
+        &.reverse{
+            .text_area{
+                grid-column: 2;
+            }
+            .image_area{
+                grid-column: 1;
+            }
+        }
+        &.split-8-4{
+            grid-template-columns: 8fr 4fr;
+            .image_area{
+                .content{
+                    min-height: 12rem;
+                }
+            }
+            &.reverse{
+                grid-template-columns: 4fr 8fr;
+            }
+        }
+        &.inset{
+            .image_area{
+                padding: var(--sp-400);
+            }
+        }
+    }//a.grid_area.block
+}//promo--full_width
+
+

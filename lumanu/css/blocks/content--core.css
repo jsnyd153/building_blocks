@@ -1,0 +1,61 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--core .block {
+  --column_span: 8;
+  --column_start: 4;
+  margin: var(--gap) 0;
+}
+.content--core .block .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.image_area.figure {
+  border-top: 3px solid var(--grey-300);
+}
+.image_area.figure .fig_header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: var(--sp-400) 0;
+}
+.image_area.figure .fig_header .label {
+  font-size: 0.875rem;
+}
+.image_area.figure .fig_header .social_links .content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sp-100);
+}
+.image_area.figure .fig_header .social_links .content a {
+  display: block;
+  width: var(--sp-400);
+  height: var(--sp-400);
+  border: 1px solid var(--grey-300);
+  color: var(--grey-700);
+  background-color: var(--white);
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+.image_area.figure .fig_header .social_links .content a svg {
+  width: 100%;
+  fill: currentColor;
+  margin: 10%;
+}
+.image_area.figure .fig_header .social_links .content a:hover, .image_area.figure .fig_header .social_links .content a:focus {
+  color: var(--white);
+  background-color: var(--grey-700);
+}
+.image_area.figure .fig_header .social_links .content a:focus {
+  outline: 2px solid var(--grey-700);
+  outline-offset: 2px;
+}
+.image_area.figure .fig_header h4 {
+  grid-column: 1/-1;
+}
+.image_area.figure figure.content {
+  border-top: 1px solid var(--grey-300);
+  border-bottom: 1px solid var(--grey-300);
+  padding: var(--sp-400) 0;
+}

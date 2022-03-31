@@ -1,0 +1,35 @@
+section{
+    class
+
+    template: [block_custom]
+
+}
+
+
+block_custom{
+
+    template: [varients for differnt start numbers]
+    allowed: [insight_card]
+
+
+    withLayout( 
+        slider = 1-4
+        )
+    
+insight
+    withPosition()
+
+}
+
+insight_card{
+
+    template: [Text_area-forInsight, image-Area with link]
+    temaplte lock
+
+
+}
+
+image_area-forInsight{
+    textcontent with link
+    insight_footer
+}

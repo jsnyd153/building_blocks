@@ -1,0 +1,71 @@
+@use "abstracts" as *;
+@use "components" as *;
+@use "blocks" as *;
+@import url(reset.css);
+@import url(https://use.typekit.net/qcn8avg.css);
+
+body {
+  margin: 0;
+}
+
+:root {
+  --text_color: #{$color_black};
+  --accent: #{$color_blue-500};
+  --background_color: #{$color_white};
+}
+
+#page::before {
+  background-color: rgba($color: #000000, $alpha: 0.05);
+  @include psuedo_block();
+  @include image_cover();
+  z-index: -2;
+}
+
+// html, body{
+//     width:100%;
+//     height:100%;
+//     overflow-x: hidden;
+//     scroll-behavior: smooth;
+// }
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ::selection, ::-moz-selection {
+//   color: $gold; /* WebKit/Blink Browsers */
+//   background-color: rgba(#E8A80C, 0.05); /* WebKit/Blink Browsers */
+// }
+
+//   img{
+//   	&::selection, &::-moz-selection {
+//   	background-color: $gold;
+//   	}
+//   }
+
+//   h1,h2,h3{
+//   	&::selection, &::-moz-selection{
+//   	color: $gold_2; /* WebKit/Blink Browsers */
+//   	}
+//   }
+
+//   footer{
+//     position: relative;
+//     padding-bottom:4.625rem;
+//   }
+//   #postfoot{
+//     background:$dark;
+//     position:absolute;
+//     width:100%;
+//     opacity: .75;
+//     bottom:0;
+//     p{
+//       color:$offwhite;
+//       font-size: .875rem;
+//       text-align: center;
+//       padding:.875rem;
+//     }
+//   }

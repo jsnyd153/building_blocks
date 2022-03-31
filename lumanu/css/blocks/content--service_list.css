@@ -1,0 +1,59 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--service_list .block .service-list {
+  --items_per_row: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--items_per_row), 1fr);
+  grid-row-gap: var(--sp-200);
+  grid-column-gap: var(--gap);
+}
+.content--service_list .block .service-list li a {
+  display: flex;
+  font-size: 1rem;
+  line-height: 100%;
+  font-family: "Graphik", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: var(--blue-500);
+  text-decoration: none;
+  transition: 0.3s all;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-100) 0 var(--sp-200) 0;
+  border-bottom: 1px solid var(--grey-300);
+  position: relative;
+}
+.content--service_list .block .service-list li a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--accent);
+  width: 0;
+  transition: 0.3s all;
+  right: 0;
+  left: auto;
+}
+.content--service_list .block .service-list li a::after {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0.4em solid transparent;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.4em solid var(--blue-500);
+  transition: 0.3s all;
+  margin-right: 0.25em;
+}
+.content--service_list .block .service-list li a:hover, .content--service_list .block .service-list li a:focus {
+  --text_color: var(--accent);
+}
+.content--service_list .block .service-list li a:hover::before, .content--service_list .block .service-list li a:focus::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}

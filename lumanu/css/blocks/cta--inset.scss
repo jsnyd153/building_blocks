@@ -1,0 +1,27 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.cta--inset{
+    .block{
+        --background_color:#{$color_blue-500};
+        --text_color:#{$color_white};
+        // --column_span: 12;
+		// --column_start: 2;
+        display: grid;
+        grid-template-columns: repeat(var(--column_span), 1fr);
+        gap: var(--gap);
+        background-color: var(--background_color);
+
+            .text_area{
+                grid-column: span 8;
+                padding: var(--sp-600) 0 var(--sp-600) var(--sp-600);
+                &:last-child{
+                    text-align: right;
+                    grid-column: span 4;
+                    padding: var(--sp-600) var(--sp-600) var(--sp-600) 0;
+                }
+            }//text
+        }
+
+}

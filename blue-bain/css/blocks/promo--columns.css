@@ -1,0 +1,63 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.promo--columns .block {
+  margin: var(--sp-400) 0;
+  --items_per_row:2;
+  text-decoration: none;
+  transition: 0.3s all;
+  border: 1px solid var(--grey-300);
+  grid-auto-flow: dense;
+}
+.promo--columns .block * {
+  transition: 0.2s all;
+}
+.promo--columns .block .text_area {
+  padding: var(--sp-400) var(--sp-400) var(--sp-400) var(--sp-600);
+}
+.promo--columns .block .text_area .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-300);
+}
+.promo--columns .block .text_area .content .base-button {
+  margin-top: var(--sp-300);
+  margin-right: auto;
+}
+.promo--columns .block .image_area .content {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-height: 20rem;
+}
+.promo--columns .block .image_area .content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.promo--columns .block.reverse .text_area {
+  grid-column: 2;
+}
+.promo--columns .block.reverse .image_area {
+  grid-column: 1;
+}
+.promo--columns .block.split-8-4 {
+  grid-template-columns: 8fr 4fr;
+}
+.promo--columns .block.split-8-4 .image_area .content {
+  min-height: 12rem;
+}
+.promo--columns .block.split-8-4.reverse {
+  grid-template-columns: 4fr 8fr;
+}
+.promo--columns .block.inset .image_area {
+  padding: var(--sp-400);
+}

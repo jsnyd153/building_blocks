@@ -1,0 +1,77 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.hero--core {
+  min-height: 35rem;
+}
+.hero--core .block {
+  position: relative;
+  --column_span: 5;
+  --column_start: 2;
+  margin: auto 0;
+  padding: var(--sp-500) var(--sp-700);
+  border-top: 3px var(--accent) solid;
+  background: var(--background_color);
+}
+.hero--core .block .text_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero--core .block .text_area .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-400);
+}
+.hero--core .block .text_area .content > * {
+  margin: 0;
+  color: var(--text_color);
+}
+.hero--core .block .text_area .content .tag {
+  color: var(--accent);
+  font-weight: 500;
+}
+.hero--core .block .text_area .content hr {
+  border: 1px solid var(--grey-200);
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
+}
+.hero--core .block.right {
+  --column_start: 9;
+}
+.hero--core .block.center {
+  --column_span: 10;
+  --column_start: 3;
+  text-align: center;
+}
+.hero--core .block.bottom {
+  --column_start: 2;
+  --column_span: 8;
+  --text_color: white;
+  --background_color: transparent;
+  margin-bottom: 0;
+  margin-top: auto;
+  padding: var(--sp-800) 0;
+  border-top: 0;
+}
+.hero--core .block.bottom .content .tag {
+  color: var(--text_color);
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+  font-weight: 400;
+}
+.hero--core .block.fill_height {
+  margin: var(--sp-700) 0;
+}
+.hero--core .block.clear {
+  --text_color: white;
+  --accent: white;
+  --background_color: transparent;
+  border-top: 3px var(--background_color) solid;
+}
+.hero--core .block.translucent {
+  background: rgba(255, 255, 255, 0.8);
+}

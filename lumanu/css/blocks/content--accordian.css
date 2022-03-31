@@ -1,0 +1,71 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--accordian .block {
+  margin: var(--sp-400) 0;
+}
+.content--accordian dd {
+  max-height: 0;
+  transition: 0.3s all;
+  overflow: hidden;
+  border-bottom: 1px solid var(--grey-300);
+  margin-bottom: var(--sp-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-200);
+}
+.content--accordian dd p {
+  max-width: clamp(20rem, 80%, 50rem);
+  font-family: "Graphik", Helvetica, Arial, sans-serif;
+  --text_color: var(--grey-800);
+}
+.content--accordian dt {
+  margin: var(--sp-300) 0;
+}
+.content--accordian dt button {
+  display: flex;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text_color);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s all;
+}
+.content--accordian dt button:hover, .content--accordian dt button:focus {
+  --text_color: var(--accent);
+}
+.content--accordian dt button:focus {
+  border-radius: 2px;
+  transform: translateY(-0.25rem);
+  outline: 0px solid var(--accent);
+}
+.content--accordian dt button h4 {
+  font-weight: 400;
+}
+.content--accordian dt button svg {
+  width: var(--sp-600);
+  height: var(--sp-600);
+}
+.content--accordian dt button svg * {
+  stroke: var(--text_color);
+  stroke-width: 1.5;
+  transition: 0.3s all;
+  transform-origin: center center;
+}
+.content--accordian dt.active button {
+  --text_color: var(--accent);
+}
+.content--accordian dt.active button svg path.vertical {
+  transform: rotate(90deg);
+}
+.content--accordian dt.active + dd {
+  max-height: 100%;
+  padding: 0 0 var(--sp-400) var(--sp-600);
+}

@@ -1,0 +1,103 @@
+@use "sass:color";
+@use '../abstracts' as *;
+
+
+.content--team_cards{
+    .block{
+        margin: var(--sp-400) calc(var(--gap) * -1);
+        grid-column-gap: 0;
+        
+        .team_card{
+            text-decoration: none;
+            padding: 0 var(--gap);
+            
+            .image_area{
+                margin-bottom: var(--sp-300);
+            }
+            .text_area{
+                margin-bottom: var(--sp-300);
+                .content{
+                    gap: 0;
+                    h4{
+                        font-weight: 500;
+                    }
+                    p{
+                        color: var(--grey-700);
+                        font-size: 0.9375rem;
+                        font-family: $sans_font;
+                    }
+                }//content
+            }//text_area
+
+            &:hover{
+                .text_area{
+                    .content{
+                        h4{
+                            color: var(--accent);
+                        }
+                    }//content
+                }//text_area
+            }
+        }//industry_card
+        
+        //hacky way to control borders
+        // apply border left, except to the first child and the first in each row 
+        // using the grid-x utiliy class to know how many items are in each row
+
+        // need to add the additional border:0; with equal specificity to clear 
+        // extra borders from multiple grid-x classes at differnt media queries
+        @for $i from 1 through 6 {
+            &.grid-#{$i} {
+                .team_card:not(:first-child):not(:nth-child(#{$i}n + 1)){
+                    border-left:1px solid var(--grey-300);
+                }
+            }
+            @include sm() {
+                &.grid-sm-#{$i} {
+                    .team_card:not(:nth-last-child(99)):not(:nth-child(99)){
+                        border: 0;
+                    }
+                    .team_card:not(:first-child):not(:nth-child(#{$i}n + 1)){
+                        border-left:1px solid var(--grey-300);
+                    }
+                }
+            }
+            @include md() {
+                &.grid-md-#{$i} {
+                    .team_card:not(:nth-last-child(99)):not(:nth-child(99)){
+
+                        border: 0;
+                    }
+                    .team_card:not(:first-child):not(:nth-child(#{$i}n + 1)){
+                        border-left:1px solid var(--grey-300);
+                    }
+                }
+            }
+            @include lg() {
+                &.grid-lg-#{$i} {
+                    .team_card:not(:nth-last-child(99)):not(:nth-child(99)){
+                        border: 0;
+                    }
+                    .team_card:not(:first-child):not(:nth-child(#{$i}n + 1)){
+                        border-left:1px solid var(--grey-300);
+                    }
+                }
+            }
+            @include xl() {
+                &.grid-xl-#{$i} {
+                    .team_card:not(:nth-last-child(99)):not(:nth-child(99)){
+
+                        border: 0;
+                    }
+                    .team_card:not(:first-child):not(:nth-child(#{$i}n + 1)){
+                        border-left:1px solid var(--grey-300);
+                    }
+                }
+            }
+
+        }//for loop grid classes
+
+    }//block
+}//section
+
+

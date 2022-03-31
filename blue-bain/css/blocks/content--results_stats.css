@@ -1,0 +1,19 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--results_stats .block {
+  margin: var(--sp-400) 0;
+  --items_per_row:2;
+}
+.content--results_stats .block .text_area .content {
+  text-align: center;
+}
+.content--results_stats .block .text_area .content h3 {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+.content--results_stats .block .text_area .content p {
+  color: var(--grey-700);
+  line-height: 1.2;
+}

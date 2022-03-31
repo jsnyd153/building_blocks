@@ -1,0 +1,40 @@
+#checkforrepeat {
+  --hello:repeated;
+}
+
+.content--basic_cards {
+  grid-row-gap: 0;
+}
+.content--basic_cards .block {
+  gap: 0;
+}
+.content--basic_cards .block .card {
+  padding: var(--sp-500) var(--sp-600);
+  border: 1px solid var(--grey-300);
+  margin: -0.5px;
+  display: flex;
+  flex-direction: column;
+}
+.content--basic_cards .block .card > * {
+  flex-grow: 0;
+  margin-bottom: var(--sp-300);
+}
+.content--basic_cards .block .card .text_area .content p:noth(.small, .large, .jumbo) {
+  font-size: 1em;
+  --text_color:#424242;
+  line-height: 1.45;
+}
+.content--basic_cards .block .card .anchor_bottom {
+  margin-top: var(--sp-500);
+  margin-bottom: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.content--basic_cards .block a.card {
+  text-decoration: none;
+}
+.content--basic_cards .block a.card:hover {
+  background: var(--grey-100);
+}
